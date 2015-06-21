@@ -1,0 +1,55 @@
+html, body {
+    /*overflow-y:scroll;*/
+    overflow-x:hidden; 
+    position: relative;
+    height:100%;
+    width:100%;
+    margin: 0;
+    padding: 0;
+    background-color:#3E603C;
+    color:#BBF5B8 ;
+}
+
+body{
+	background-color: #BBF5B8;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+label{
+	color:#343434;
+}
+
+input{
+	background-color:#343434!important;
+	color:#5bb446!important; 
+	border-color:#5bb446!important;
+}
+
+.apiButton{
+	color: #5bb446;
+	border:solid;
+	border-color:#5bb446;
+	background-color:transparent;
+}
+
+.titleRow{
+	background-color: #556D53;
+}
+.docsRow{
+	background-color: #022B00;
+}
+.exampleRow{
+
+	background-color:#556D53; 
+}
+
+.example{
+	color: #5bb446;
+	background-color:#343434;
+	margin:5%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+

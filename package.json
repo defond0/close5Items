@@ -1,0 +1,26 @@
+{
+  "name": "close5Items",
+  "version": "1.0.0",
+  "description": "API server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeff DeFond",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.4",
+    "express-handlebars": "^2.0.1",
+    "grunt": "^0.4.5",
+    "handlebars": "^3.0.3",
+    "helmet": "^0.9.1",
+    "jshint": "^2.8.0",
+    "mongoose": "^4.0.4"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-handlebars": "^0.10.2",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "~0.5.0"
+  }
+}

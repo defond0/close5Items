@@ -1,0 +1,86 @@
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="row text-center titleRow">
+				<h1><i class="fa fa-smile-o fa-2x"></i><i class="fa fa-thumbs-o-up"></i><br><h1>
+				<h1>Items API </h1>
+				<p>This lightweight API has one simple route to cover your basic needs:<br>
+				<font size="3">'api/v1/items'</font> get an item by id, get all items, get user items, get items within 50 miles of 	your location</p>
+			</div>
+			<div class="row docsRow">
+				<h2>Docs</h2>
+					<p>
+					All requests are GET requests to the route api/v1/items:<br>
+					To specify what sort of items you want append a query string with the following values;
+					</p><br>
+				<div class="col-lg-8 col-lg-offest-2 ">
+					<dl class="dl-horizontal">
+					<h4>Required/Unique key(s)</h4>
+                    <dt>sortBy:</dt>
+                    <dd>Can be set set to 'price' or 'date'. Will return a list of all items sorted by either price or date created. Default is date</dd>
+                    <dt>loc:</dt>
+                    <dd>Returns all items within range of specified co-ordinates. Must be set in the following format [longitude,latitude] </dd>
+                    <dt>userId:<dt> 
+                    <dd>Returns all items associated with the specified user ID</dd>
+                    <dt>itemId:<dt> 
+                    <dd>Returns Item with specified ID</dd>
+                    <h4>Optional key(s)</h4>
+                    <dt>ascending:</dt>
+                    <dd>Sets sort order for all sorted lists. If set to false will sort results by descending values. Default is true </dd>
+                </dl>
+				</div>
+			</div>
+			<div class="row exampleRow">
+				<h2>Examples</h2>
+				<p>To get items send a GET request to http://localhost:8080/api/v1/items?<span class="qs"></span></p>
+				<div class="col-lg-2 col-md-2 col-md-offset-1 col-lg-offset-2 formCol">
+					<form>
+						<label>sortBy:</label>
+						<input type="text" class="form-control apiInput" name="sortBy" placeholder="price or date">
+						<label>ascending:</label>
+						<input type="text" class="form-control apiInput" name="ascending" value="true"><br>
+						<button class="btn apiButton" type="submit">Hit API</button>
+					</form>
+				</div>
+				<div class="col-lg-2 col-md-2 col-md-offset-1 col-lg-offset-1 formCol">
+					<form>
+						<label>itemId:</label>
+						<input type="text" class="form-control apiInput" name="itemId" placeholder="itemId">
+						<label>userId:</label>
+						<input type="text" class="form-control apiInput" name="userId" placeholder="userId"><br>
+						<button class="btn apiButton" type="submit">Hit API</button>
+					</form>
+				</div>
+				<div class="col-lg-2 col-md-2 col-md-offset-1 col-lg-offset-1 formCol">
+					<form>
+						<label>loc:</label>
+						<input type="text" class="form-control apiInput" name="loc" placeholder="lat,long">
+						<label>ascending:</label>
+						<input type="text" class="form-control apiInput" name="ascending" value="true"><br>
+						<button class="btn apiButton" type="submit">Hit API</button>
+					</form>
+
+				</div>
+				<div class="col-lg-10 col-lg-offset-1">
+						<div class="example"> 
+						Example Ajax request:<br>
+						//Url with Query String = localhost:8080/api/v1/items?<span class="qs"></span><br>
+								$.ajax({<br>
+								&nbsp;&nbsp;url:'/api/v1/items',<br>
+								&nbsp;&nbsp;method:'get',<br>
+								&nbsp;&nbsp;data:<span class="dataCode">Form Input</span>;,<br>
+								});<br>
+
+							<div class="row" id="results">
+							</div>
+						</div>
+				</div>
+			</div>
+			<div class="row ">
+				
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="/public/js/scripts.js" type="text/javascript"></script>
+</body>

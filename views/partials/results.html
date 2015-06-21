@@ -1,0 +1,36 @@
+<div id="results">
+	 <div class="container-fluid">
+    	<div class="row">
+    		<h2>{</h2>
+    		<h2>status:{{#if data.message}}{{data.status}}{{else}}200{{/if}}</h2>
+        	<h2>message:{{#if data.message}}{{data.message}}</h2> <h2>}</h2> {{else}}null</h2>{{/if}}
+       
+        </div>
+        <div class="row">
+         {{#if data.results}}
+        <h2>results:[</h2>
+	    	{{#each data.results}}
+	    		<div class="row">
+	    			{{#each this}}
+						<div class="col-sm-4 col-md-4 col-lg-4">
+							<h3>{{this.idx}}</h3>
+							{<br>
+			        		id : {{this.id}}<br>
+							loc : {{this.loc}}<br>
+							userId : {{this.userId}}<br>
+							price : {{this.price}}<br>
+							status : {{this.status}}<br>
+							createdAt : {{this.createdAt}}<br>
+							description : <p>{{this.description}}</p>
+							},
+				        </div>
+	    			{{/each}}
+	    		</div>
+	    	{{/each}}
+	    	<h2>]<br>}</h2>
+	    {{else}}
+
+    	{{/if}}
+        </div>
+    </div>
+</div>
